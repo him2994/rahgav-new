@@ -188,11 +188,11 @@ def update_thread():
 def send_emails(r):
     To  = Email.objects.all()
     from_email = Email_USER
-    job = soldier.run('cp script/update/data.xlsx > script/update/data.xls')
+    job = soldier.run('cp script/update/data.xlsx script/update/data.xls')
     print job.output
-    job = soldier.run('cp script/Total/data.xlsx > script/Total/data.xls')
+    job = soldier.run('cp script/Total/data.xlsx script/Total/data.xls')
     print job.output
-    job = soldier.run('cp script/Output/data.xlsx > script/Output/data.xls')
+    job = soldier.run('cp script/Output/data.xlsx script/Output/data.xls')
     print job.output
     # for email,name in to:
     if r == 'add':
