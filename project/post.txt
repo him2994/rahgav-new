@@ -1,0 +1,744 @@
+<bound method BeautifulSoup.prettify of <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><link href="/search/javax.faces.resource/theme.css.jsf?ln=primefaces-aristo" rel="stylesheet" type="text/css"/><link href="/search/org.richfaces.resources/javax.faces.resource/org.richfaces.staticResource/4.5.5.Final/PackedCompressed/classic/org.richfaces.css/skinning.css" rel="stylesheet" type="text/css"/><script src="/search/javax.faces.resource/jsf.js.jsf?ln=javax.faces" type="text/javascript"></script><script src="/search/org.richfaces.resources/javax.faces.resource/org.richfaces.staticResource/4.5.5.Final/PackedCompressed/org.richfaces/jquery.js" type="text/javascript"></script><script src="/search/org.richfaces.resources/javax.faces.resource/org.richfaces.staticResource/4.5.5.Final/PackedCompressed/packed/packed.js" type="text/javascript"></script><link href="/search/org.richfaces.resources/javax.faces.resource/org.richfaces.staticResource/4.5.5.Final/PackedCompressed/classic/packed/packed.css" rel="stylesheet" type="text/css"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="This patent search tool allows you not only to search the PCT database of about 2 million International Applications but also the worldwide patent collections. This search facility features: flexible search syntax; automatic word stemming and relevance ranking; as well as graphical results." name="Description"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="/search/css/tiles.css" rel="stylesheet" type="text/css"/>
+<link href="/search/css/dropDown.css" rel="stylesheet" type="text/css"/>
+<meta content="en" name="language"/>
+<title>EP2013003547 SMART WASTE COLLECTION SYSTEM AND METHOD
+			</title>
+<meta content="SMART WASTE COLLECTION SYSTEM AND METHOD" name="keywords"/>
+<meta content="SMART WASTE COLLECTION SYSTEM AND METHOD" name="description"/>
+<link href="https://patentscope.wipo.int/search/fr/WO2014079586" hreflang="fr" rel="alternate"/>
+<meta content="WO2014079586" name="DC.identifier"/>
+<meta content="Patent Application" name="DC.type"/>
+<meta content="SMART WASTE COLLECTION SYSTEM AND METHOD" name="DC.title"/>
+<meta content="KEKALAINEN, Fredrik" name="DC.creator" scheme="inventor"/>
+<meta content="ENGSTROM, Johan" name="DC.creator" scheme="inventor"/>
+<meta content="ENEVO OY " name="DC.contributor" scheme="assignee"/>
+<meta content="2014/05/31" name="DC.date" scheme="issued"/>
+<link href="/search/css/chemc/molecules_grid.css" rel="stylesheet" type="text/css"/></head><body>
+<script type="text/javascript">
+	//<![CDATA[
+function bookmark(url,title) {
+  if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) {
+  window.external.AddFavorite(url,title);
+  } else if (navigator.appName == "Netscape") {
+    window.sidebar.addPanel(title,url,"");
+  } else {
+    alert("Press CTRL-D (Netscape) or CTRL-T (Opera) to bookmark");
+  }
+}
+  
+  var checkAll=true;var checkLP=false;
+  var strAll='ALL',strLP='LP';
+  var latiPatArray = ['LP','BR','ES','CO','CR','CU','CL','HN','PE','SV',
+                      'AR','UY','NI','EC','DO','MX','GT','PA'];
+
+	function IsLatipatCountry(ctrName){
+		for (var i=0; i<latiPatArray.length; i++) {
+			if (ctrName ==latiPatArray[i]) 
+				return true ;
+		}	
+		return false;
+  }
+
+	function GetLPChckBoxValue(FormName, FieldName){
+  	
+  	if(!document.forms[FormName])
+  		return;
+  	var objCheckBoxes = document.forms[FormName].elements[FieldName];
+  	if(!objCheckBoxes)
+  		return;
+  	var countCheckBoxes = objCheckBoxes.length;
+  	for(var i = 0; i < countCheckBoxes; i++){
+			//alert(objCheckBoxes[i].value + ' ' +strAll);
+			if(objCheckBoxes[i].value ==strLP ){
+				//alert(objCheckBoxes[i].checked);
+				return objCheckBoxes[i].checked ;
+			}
+  	}
+  }
+
+	function SetLPChckBoxValue(FormName, FieldName,val){
+  	if(!document.forms[FormName])
+  		return;
+  	var objCheckBoxes = document.forms[FormName].elements[FieldName];
+  	if(!objCheckBoxes)
+  		return;
+  	var countCheckBoxes = objCheckBoxes.length;
+
+  	for(var i = 0; i < countCheckBoxes; i++){
+			if(objCheckBoxes[i].value == strLP ){
+				 objCheckBoxes[i].checked =val;
+				 return;
+			}
+  	}
+  }
+  
+  
+  function GetAllChckBoxValue(FormName, FieldName){
+  	
+  	if(!document.forms[FormName])
+  		return;
+  	var objCheckBoxes = document.forms[FormName].elements[FieldName];
+  	if(!objCheckBoxes)
+  		return;
+  	var countCheckBoxes = objCheckBoxes.length;
+  	for(var i = 0; i < countCheckBoxes; i++){
+			//alert(objCheckBoxes[i].value + ' ' +strAll);
+			if(objCheckBoxes[i].value ==strAll ){
+				return objCheckBoxes[i].checked ;
+			}
+  	}
+  }
+
+  function SetAllChckBoxValue(FormName, FieldName,val){
+  	if(!document.forms[FormName])
+  		return;
+  	var objCheckBoxes = document.forms[FormName].elements[FieldName];
+  	if(!objCheckBoxes)
+  		return;
+  	var countCheckBoxes = objCheckBoxes.length;
+
+  	for(var i = 0; i < countCheckBoxes; i++){
+			if(objCheckBoxes[i].value == strAll ){
+				 objCheckBoxes[i].checked =val;
+				 return;
+			}
+  	}
+  }
+  
+  function SetAllValue(FormName, FieldName)
+  {
+  	if(!document.forms[FormName])
+  		return;
+  	var objCheckBoxes = document.forms[FormName].elements[FieldName];
+  	if(!objCheckBoxes)
+  		return;
+  	var countCheckBoxes = objCheckBoxes.length;
+      checkAll=GetAllChckBoxValue(FormName, FieldName); //objCheckBoxes[countCheckBoxes-1].checked;
+      checkLP=GetLPChckBoxValue(FormName, FieldName);
+      //alert('SetAllValue' + checkAll);
+  }
+  
+  function DoTheCheck(FormName, FieldName)
+  {
+	 
+  	if(!document.forms[FormName])
+  		return;
+  	var objCheckBoxes = document.forms[FormName].elements[FieldName];
+  	if(!objCheckBoxes)
+  		return;
+  	var countCheckBoxes = objCheckBoxes.length;
+  	SetAllChckBoxValue(false); 
+  	for(var i = 0; i < countCheckBoxes; i++){
+			if((objCheckBoxes[i].value != strAll ) && objCheckBoxes[i].checked == true && checkAll){
+				SetAllChckBoxValue(FormName, FieldName,false); //objCheckBoxes[countCheckBoxes-1].checked = false;
+			}
+  	}
+  	
+  	//alert(checkAll);
+  	if(GetAllChckBoxValue(FormName, FieldName)==true && !checkAll){
+  		for(var i = 0; i < countCheckBoxes; i++)
+  			if (objCheckBoxes[i].value != strAll ) objCheckBoxes[i].checked = false;
+  	}
+
+  	if(GetLPChckBoxValue(FormName, FieldName)==true && !checkLP){
+  		for(var i = 0; i < countCheckBoxes; i++)
+  			if (IsLatipatCountry(objCheckBoxes[i].value)){ 
+
+      			objCheckBoxes[i].checked = true;
+  			}
+  	}
+  	
+  	checkAll=GetAllChckBoxValue(FormName, FieldName) ;
+  	checkFP=GetLPChckBoxValue(FormName, FieldName) ;
+  }
+
+//]]>
+</script><span id="dobox">
+<div class="center">
+<span class="notranslate">
+<table width="100%">
+<tr>
+<td width="160px"><a href="http://www.wipo.int"><img align="left" alt="WIPO logo" src="/search/images/logo_2010.gif" style="border: none"/></a></td>
+<td width="540px">
+<table width="100%">
+<tr>
+<td style="text-align:right;">
+<form action="/search/en/detail.jsf" enctype="application/x-www-form-urlencoded" id="j_idt57" method="post" name="j_idt57" style="display:inline">
+<input name="j_idt57" type="hidden" value="j_idt57"/>
+<img height="12" src="/search/images/mobile.png" style="text-decoration: none;" width="12px"/><a class="langLink" href="/search/mobile/index.jsf">Mobile |
+						</a><a class="langLink" href="/search/de/detail.jsf?docId=WO2014079586&amp;redirectedID=true">
+								Deutsch |
+						</a><a class="langLink" href="/search/es/detail.jsf?docId=WO2014079586&amp;redirectedID=true">
+								Español |
+						</a><a class="langLink" href="/search/fr/detail.jsf?docId=WO2014079586&amp;redirectedID=true">
+								
+								Français |
+						</a><a class="langLink" href="/search/ja/detail.jsf?docId=WO2014079586&amp;redirectedID=true">
+								
+								日本語 |
+						</a><a class="langLink" href="/search/ko/detail.jsf?docId=WO2014079586&amp;redirectedID=true">
+								
+								한국어 |
+						</a><a class="langLink" href="/search/pt/detail.jsf?docId=WO2014079586&amp;redirectedID=true">
+								
+								Português |
+						</a><a class="langLink" href="/search/ru/detail.jsf?docId=WO2014079586&amp;redirectedID=true">
+								
+								Русский |
+						</a><a class="langLink" href="/search/zh/detail.jsf?docId=WO2014079586&amp;redirectedID=true">
+								
+								中文 |
+						</a><a class="langLink" href="/search/ar/detail.jsf?docId=WO2014079586&amp;redirectedID=true">
+								
+								العربية |
+						</a><input autocomplete="off" id="j_id1:javax.faces.ViewState:0" name="javax.faces.ViewState" type="hidden" value="-950562687374763460:-5059884832805734722"/>
+</form>
+</td>
+</tr>
+<tr>
+<td>
+<div style="font-size: 17px; color: #003478; font-weight: bolder; font-family: Helvetica;">PATENTSCOPE</div>
+</td>
+</tr>
+<tr><td>
+<hr/><div style="font-size: 12px;color:gray">
+					Search International and National Patent Collections</div>
+</td></tr>
+</table>
+</td></tr>
+<tr><td colspan="2">
+<div id="siteIdentifier" with="100%"><img alt="World Intellectual Property Organization" src="/search/images/icons/wipo-grey.gif" style="border-style: none;vertical-align: top;"/>
+</div>
+</td></tr>
+</table>
+</span>
+<span class="notranslate"><div id="optionsPane" style="visibility: hidden;"><div class="rf-pp-shade" id="optionsPane_shade" style="z-index:100;"><button class="rf-pp-btn" id="optionsPaneFirstHref" name="optionsPanefirstHref"></button></div><div class="rf-pp-cntr " id="optionsPane_container" style="position: fixed; z-index:100; "><div class="rf-pp-shdw" id="optionsPane_shadow"></div><div class="rf-pp-hdr " id="optionsPane_header"><div class="rf-pp-hdr-cnt" id="optionsPane_header_content">Options</div></div><div class="rf-pp-hdr-cntrls " id="optionsPane_header_controls"><a href="#" onclick="RichFaces.component('optionsPane').hide(); return false;">
+<img alt="close" id="hidelink" src="/search/images/icons/close.png" style="cursor: pointer"/></a></div><div class="rf-pp-cnt-scrlr" id="optionsPane_content_scroller"><div class="rf-pp-cnt" id="optionsPane_content">
+<style>
+body {
+	text-align: center;
+}
+</style>
+<form action="/search/en/detail.jsf" enctype="application/x-www-form-urlencoded" id="optionsForm" method="post" name="optionsForm">
+<input name="optionsForm" type="hidden" value="optionsForm"/>
+<div class="rf-tbp" id="optionsForm:j_idt91"><input id="optionsForm:j_idt91-value" name="optionsForm:j_idt91-value" type="hidden" value="optionsForm:j_idt92"/><div class="rf-tab-hdr-tabline-vis rf-tab-hdr-tabline-top" id="optionsForm:j_idt91header"><table cellspacing="0" class="rf-tab-hdr-tabs"><tbody><tr><td class="rf-tab-hdr-spcr" style="padding-left: 5px;"><br/></td><td class="rf-tab-hdr rf-tab-hdr-act rf-tab-hdr-top" data-tabname="optionsForm:j_idt92" id="optionsForm:j_idt92:header" style=""><span class="rf-tab-lbl">Query</span></td><td class="rf-tab-hdr-spcr rf-tab-hortab-tabspcr-wdh" style=""><br/></td><td class="rf-tab-hdr rf-tab-hdr-inact rf-tab-hdr-top" data-tabname="optionsForm:j_idt111" id="optionsForm:j_idt111:header" style=""><span class="rf-tab-lbl">Result</span></td><td class="rf-tab-hdr-spcr rf-tab-hortab-tabspcr-wdh" style=""><br/></td><td class="rf-tab-hdr rf-tab-hdr-inact rf-tab-hdr-top" data-tabname="optionsForm:j_idt134" id="optionsForm:j_idt134:header" style=""><span class="rf-tab-lbl">Interface</span></td><td class="rf-tab-hdr-spcr rf-tab-hortab-tabspcr-wdh" style=""><br/></td><td class="rf-tab-hdr rf-tab-hdr-inact rf-tab-hdr-top" data-tabname="optionsForm:j_idt154" id="optionsForm:j_idt154:header" style=""><span class="rf-tab-lbl">Office</span></td><td class="rf-tab-hdr-spcr rf-tab-hortab-tabspcr-wdh" style=""><br/></td><td class="rf-tab-hdr rf-tab-hdr-inact rf-tab-hdr-top" data-tabname="optionsForm:j_idt297" id="optionsForm:j_idt297:header" style=""><span class="rf-tab-lbl">Translate</span></td><td class="rf-tab-hdr-spcr rf-tab-hortab-tabspcr-wdh" style=""><br/></td><td class="rf-tab-hdr-spcr" style="padding-right: 5px; width: 100%;"><br/></td></tr></tbody></table><div class="rf-tab-hdr-scrl-lft rf-tab-hdn">«</div><div class="rf-tab-hdr-tablst rf-tab-hdn">↓</div><div class="rf-tab-hdr-scrl-rgh rf-tab-hdn">»</div></div><div class="rf-tab-hdr-brd"></div><div class="rf-tab" id="optionsForm:j_idt92"><div class="rf-tab-cnt" id="optionsForm:j_idt92:content"><table class="formGrid">
+<tbody>
+<tr class="alignTop">
+<td><span class="formLabel">Query Language</span></td>
+<td>
+<table>
+<tbody id="optionsForm:j_idt98:tbody_element">
+<tr><td><input id="queryLanguageRadio:0" name="queryLanguageRadio" type="radio" value="All"/><label for="queryLanguageRadio:0"> All</label></td><td><input checked="checked" id="queryLanguageRadio:3" name="queryLanguageRadio" type="radio" value="EN"/><label for="queryLanguageRadio:3"> English</label></td><td><input id="queryLanguageRadio:6" name="queryLanguageRadio" type="radio" value="DE"/><label for="queryLanguageRadio:6"> German</label></td><td><input id="queryLanguageRadio:9" name="queryLanguageRadio" type="radio" value="KO"/><label for="queryLanguageRadio:9"> Korean</label></td><td><input id="queryLanguageRadio:12" name="queryLanguageRadio" type="radio" value="ES"/><label for="queryLanguageRadio:12"> Spanish</label></td></tr>
+<tr><td><input id="queryLanguageRadio:1" name="queryLanguageRadio" type="radio" value="AR"/><label for="queryLanguageRadio:1"> Arabic</label></td><td><input id="queryLanguageRadio:4" name="queryLanguageRadio" type="radio" value="ET"/><label for="queryLanguageRadio:4"> Estonian</label></td><td><input id="queryLanguageRadio:7" name="queryLanguageRadio" type="radio" value="HE"/><label for="queryLanguageRadio:7"> Hebrew</label></td><td><input id="queryLanguageRadio:10" name="queryLanguageRadio" type="radio" value="PT"/><label for="queryLanguageRadio:10"> Portuguese</label></td><td><input id="queryLanguageRadio:13" name="queryLanguageRadio" type="radio" value="VN"/><label for="queryLanguageRadio:13"> Vietnamese</label></td></tr>
+<tr><td><input id="queryLanguageRadio:2" name="queryLanguageRadio" type="radio" value="ZH"/><label for="queryLanguageRadio:2"> Chinese</label></td><td><input id="queryLanguageRadio:5" name="queryLanguageRadio" type="radio" value="FR"/><label for="queryLanguageRadio:5"> French</label></td><td><input id="queryLanguageRadio:8" name="queryLanguageRadio" type="radio" value="JA"/><label for="queryLanguageRadio:8"> Japanese</label></td><td><input id="queryLanguageRadio:11" name="queryLanguageRadio" type="radio" value="RU"/><label for="queryLanguageRadio:11"> Russian</label></td></tr></tbody></table>
+</td>
+</tr>
+<tr class="alignTop">
+<td><label class="formLabel" for="optionsForm:stemChoice">Stem</label></td>
+<td><input checked="checked" id="optionsForm:stemChoice" name="optionsForm:stemChoice" style="align:right;display:block;" type="checkbox"/></td>
+</tr>
+<tr class="alignTop">
+<td><span class="formLabel">Sort by:</span></td>
+<td><table>
+<tr>
+<td>
+<input id="optionsForm:j_idt105:0" name="optionsForm:j_idt105" type="radio" value="Relevance"/><label for="optionsForm:j_idt105:0"> Relevance</label></td>
+<td>
+<input id="optionsForm:j_idt105:1" name="optionsForm:j_idt105" type="radio" value="Pub Date Desc"/><label for="optionsForm:j_idt105:1"> Pub Date Desc</label></td>
+<td>
+<input id="optionsForm:j_idt105:2" name="optionsForm:j_idt105" type="radio" value="Pub Date Asc"/><label for="optionsForm:j_idt105:2"> Pub Date Asc</label></td>
+<td>
+<input id="optionsForm:j_idt105:3" name="optionsForm:j_idt105" type="radio" value="App Date Desc"/><label for="optionsForm:j_idt105:3"> App Date Desc</label></td>
+<td>
+<input id="optionsForm:j_idt105:4" name="optionsForm:j_idt105" type="radio" value="App Date Asc"/><label for="optionsForm:j_idt105:4"> App Date Asc</label></td>
+</tr>
+</table></td>
+</tr>
+<tr class="alignTop">
+<td><span class="formLabel">List Length</span></td>
+<td><table>
+<tr>
+<td>
+<input checked="checked" id="optionsForm:j_idt109:0" name="optionsForm:j_idt109" type="radio" value="10"/><label for="optionsForm:j_idt109:0"> 10</label></td>
+<td>
+<input id="optionsForm:j_idt109:1" name="optionsForm:j_idt109" type="radio" value="50"/><label for="optionsForm:j_idt109:1"> 50</label></td>
+<td>
+<input id="optionsForm:j_idt109:2" name="optionsForm:j_idt109" type="radio" value="100"/><label for="optionsForm:j_idt109:2"> 100</label></td>
+<td>
+<input id="optionsForm:j_idt109:3" name="optionsForm:j_idt109" type="radio" value="200"/><label for="optionsForm:j_idt109:3"> 200</label></td>
+</tr>
+</table></td>
+</tr>
+</tbody>
+</table>
+</div></div><div class="rf-tab" id="optionsForm:j_idt111" style="display: none"><div class="rf-tab-cnt" id="optionsForm:j_idt111:content"><table class="formGrid">
+<tbody>
+<tr class="alignTop">
+<td><span class="formLabel">Result List Language</span></td>
+<td>
+<table>
+<tbody id="optionsForm:j_idt116:tbody_element">
+<tr><td><input id="resultListRadio:0" name="resultListRadio" type="radio" value="Query Language"/><label for="resultListRadio:0"> Query Language</label></td><td><input id="resultListRadio:3" name="resultListRadio" type="radio" value="KO"/><label for="resultListRadio:3"> Korean</label></td><td><input id="resultListRadio:6" name="resultListRadio" type="radio" value="PT"/><label for="resultListRadio:6"> Portuguese</label></td><td><input id="resultListRadio:9" name="resultListRadio" type="radio" value="JA"/><label for="resultListRadio:9"> Japanese</label></td><td><input id="resultListRadio:12" name="resultListRadio" type="radio" value="AR"/><label for="resultListRadio:12"> Arabic</label></td></tr>
+<tr><td><input checked="checked" id="resultListRadio:1" name="resultListRadio" type="radio" value="EN"/><label for="resultListRadio:1"> English</label></td><td><input id="resultListRadio:4" name="resultListRadio" type="radio" value="VN"/><label for="resultListRadio:4"> Vietnamese</label></td><td><input id="resultListRadio:7" name="resultListRadio" type="radio" value="FR"/><label for="resultListRadio:7"> French</label></td><td><input id="resultListRadio:10" name="resultListRadio" type="radio" value="RU"/><label for="resultListRadio:10"> Russian</label></td><td><input id="resultListRadio:13" name="resultListRadio" type="radio" value="ET"/><label for="resultListRadio:13"> Estonian</label></td></tr>
+<tr><td><input id="resultListRadio:2" name="resultListRadio" type="radio" value="ES"/><label for="resultListRadio:2"> Spanish</label></td><td><input id="resultListRadio:5" name="resultListRadio" type="radio" value="HE"/><label for="resultListRadio:5"> Hebrew</label></td><td><input id="resultListRadio:8" name="resultListRadio" type="radio" value="DE"/><label for="resultListRadio:8"> German</label></td><td><input id="resultListRadio:11" name="resultListRadio" type="radio" value="ZH"/><label for="resultListRadio:11"> Chinese</label></td></tr></tbody></table>
+</td>
+</tr>
+<tr class="alignTop">
+<td><span class="formLabel">Displayed Fields</span></td>
+<td><table><tr><td><label><input checked="checked" id="optionsForm:j_idt121:0" name="optionsForm:j_idt121" type="checkbox" value="ANID"/> Application Number</label></td><td><label><input checked="checked" id="optionsForm:j_idt121:0" name="optionsForm:j_idt121" type="checkbox" value="EN_AB"/> Abstract</label></td><td><label><input checked="checked" id="optionsForm:j_idt121:0" name="optionsForm:j_idt121" type="checkbox" value="IC"/> Int. Class</label></td><td><label><input checked="checked" id="optionsForm:j_idt121:0" name="optionsForm:j_idt121" type="checkbox" value="IN"/> Inventor Name</label></td></tr><tr><td><label><input checked="checked" id="optionsForm:j_idt121:0" name="optionsForm:j_idt121" type="checkbox" value="DP"/> Publication Date</label></td><td><label><input checked="checked" id="optionsForm:j_idt121:0" name="optionsForm:j_idt121" type="checkbox" value="PA"/> Applicant Name</label></td><td><label><input id="optionsForm:j_idt121:0" name="optionsForm:j_idt121" type="checkbox" value="IMG"/> Image</label></td><td></td></tr></table></td>
+</tr>
+<tr class="alignTop">
+<td><span class="formLabel">Chart/Graph</span></td>
+<td><table>
+<tr>
+<td>
+<input checked="checked" id="optionsForm:j_idt125:0" name="optionsForm:j_idt125" type="radio" value="table"/><label for="optionsForm:j_idt125:0"> Table</label></td>
+<td>
+<input id="optionsForm:j_idt125:1" name="optionsForm:j_idt125" type="radio" value="graph"/><label for="optionsForm:j_idt125:1"> Graph</label></td>
+</tr>
+</table></td>
+</tr>
+<tr class="alignTop">
+<td><span class="formLabel">Group by</span></td>
+<td><table class="alignTop"><tr><td><label><input id="optionsForm:j_idt129:0" name="optionsForm:j_idt129" type="checkbox" value="NONE"/> None</label></td><td><label><input checked="checked" id="optionsForm:j_idt129:0" name="optionsForm:j_idt129" type="checkbox" value="ICF_MV"/> IPC code</label></td><td><label><input checked="checked" id="optionsForm:j_idt129:0" name="optionsForm:j_idt129" type="checkbox" value="INF_MV"/> Inventors</label></td><td><label><input checked="checked" id="optionsForm:j_idt129:0" name="optionsForm:j_idt129" type="checkbox" value="DP"/> Publication Dates</label></td></tr><tr><td><label><input id="optionsForm:j_idt129:0" name="optionsForm:j_idt129" type="checkbox" value="OF"/> Offices</label></td><td><label><input checked="checked" id="optionsForm:j_idt129:0" name="optionsForm:j_idt129" type="checkbox" value="PAF_MV"/> Applicants</label></td><td><label><input id="optionsForm:j_idt129:0" name="optionsForm:j_idt129" type="checkbox" value="AD"/> Filing Dates</label></td><td><label><input checked="checked" id="optionsForm:j_idt129:0" name="optionsForm:j_idt129" type="checkbox" value="CTR"/> Countries</label></td></tr></table></td>
+</tr>
+<tr class="alignTop">
+<td><label class="formLabel" for="optionsForm:itemsPerCluster">No of Items/Group</label></td>
+<td><select id="optionsForm:itemsPerCluster" name="optionsForm:itemsPerCluster" size="1"> <option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option selected="selected" value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+</select></td>
+</tr>
+</tbody>
+</table>
+</div></div><div class="rf-tab" id="optionsForm:j_idt134" style="display: none"><div class="rf-tab-cnt" id="optionsForm:j_idt134:content"><table class="formGrid">
+<tbody>
+<tr class="alignTop">
+<td><label class="formLabel" for="optionsForm:defaultSearchFormList">Default Search Form</label></td>
+<td><select id="optionsForm:defaultSearchFormList" name="optionsForm:defaultSearchFormList" size="1"> <option selected="selected" value="search.jsf">Simple</option>
+<option value="advancedSearch.jsf">Advanced Search</option>
+<option value="structuredSearch.jsf">Field Combination</option>
+<option value="resultWeeklyBrowse.jsf">Browse by Week (PCT)</option>
+<option value="clir/clir.jsp">Cross Lingual Expansion</option>
+<option value="search3.jsf">Translator</option>
+</select></td>
+</tr>
+<tr class="alignTop">
+<td><label class="formLabel" for="optionsForm:selectedTabSimpleSearchList">Default Tab Search Form</label></td>
+<td><select id="optionsForm:selectedTabSimpleSearchList" name="optionsForm:selectedTabSimpleSearchList" size="1"> <option selected="selected" value="fpTab">Front Page</option>
+<option value="anyField">Any Field</option>
+<option value="fullTextTab">Full Text</option>
+<option value="idTab">ID/Numbers</option>
+<option value="ipcTab">IPC</option>
+<option value="namesTab">Names</option>
+<option value="datesTab">Dates</option>
+</select></td>
+</tr>
+<tr class="alignTop">
+<td><label class="formLabel" for="optionsForm:selectedInterfaceLanguage">Interface Language</label></td>
+<td><select id="optionsForm:selectedInterfaceLanguage" name="optionsForm:selectedInterfaceLanguage" size="1"> <option selected="selected" value="en">English</option>
+<option value="de">Deutsch</option>
+<option value="fr">Français</option>
+<option value="es">Español</option>
+<option value="ja">日本語</option>
+<option value="zh">中文</option>
+<option value="ko">한국어</option>
+<option value="pt">Português</option>
+<option value="ru">Русский</option>
+</select></td>
+</tr>
+<tr class="alignTop">
+<td><label class="formLabel" for="optionsForm:skinsList">Skins</label></td>
+<td><select id="optionsForm:skinsList" name="optionsForm:skinsList" size="1"> <option value="DEFAULT">Default</option>
+<option value="plain">Plain</option>
+<option value="blueSky">Blue_Sky</option>
+<option selected="selected" value="classic">Classic</option>
+<option value="deepMarine">Deep_Marine</option>
+<option value="emeraldTown">Emerald_Town</option>
+<option value="japanCherry">Japan_Cherry</option>
+<option value="ruby">Ruby</option>
+<option value="wine">Wine</option>
+</select></td>
+</tr>
+<tr class="alignTop">
+<td><label class="formLabel" for="optionsForm:mdiList">Multiple Windows Interface</label></td>
+<td><input id="optionsForm:mdiList" name="optionsForm:mdiList" type="checkbox"/></td>
+</tr>
+<tr class="alignTop">
+<td><label class="formLabel" for="optionsForm:helpChoice">Tooltip Help</label></td>
+<td><input id="optionsForm:helpChoice" name="optionsForm:helpChoice" type="checkbox"/></td>
+</tr>
+<tr class="alignTop">
+<td><label class="formLabel" for="optionsForm:helpIpcChoice">IPC Tooltip Help</label></td>
+<td><input checked="checked" id="optionsForm:helpIpcChoice" name="optionsForm:helpIpcChoice" type="checkbox"/></td>
+</tr>
+</tbody>
+</table>
+</div></div><div class="rf-tab" id="optionsForm:j_idt154" style="display: none"><div class="rf-tab-cnt" id="optionsForm:j_idt154:content"><span id="optionsForm:countriesTab"><table class="formGrid">
+<tbody>
+<tr class="alignTop">
+<td><span class="formLabel">Office:</span></td>
+<td><img height="0px" src="/search/javax.faces.resource/spacer.gif.jsf?ln=images" width="20px"/><label>All</label></td>
+</tr>
+</tbody>
+</table>
+<div class="rf-p " id="optionsForm:countriesPanel" style="width:100%"><div class="rf-p-b rich-laguna-panel-no-header" id="optionsForm:countriesPanel_body"><table class="countryPanel">
+<tbody>
+<tr>
+<td class="columnAlign"><input checked="checked" id="optionsForm:allchkBox" name="optionsForm:allchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:allchkBox"} ,"sourceId":this} )' type="checkbox"/>
+<b><label for="optionsForm:allchkBox">All</label></b></td>
+</tr>
+<tr>
+<td class="columnAlign"><input id="optionsForm:wochkBox" name="optionsForm:wochkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:wochkBox"} ,"sourceId":this} )' type="checkbox"/>
+<b><label for="optionsForm:wochkBox">PCT</label></b></td>
+</tr>
+<tr>
+<td class="columnAlign"><input id="optionsForm:africachkBox" name="optionsForm:africachkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:africachkBox"} ,"sourceId":this} )' type="checkbox"/>
+<b><label for="optionsForm:africachkBox">Africa</label></b></td>
+</tr>
+<tr>
+<td class="columnAlign"><table class="countryPanel">
+<tbody>
+<tr class="alignTop">
+<td><img height="0px" src="/search/javax.faces.resource/spacer.gif.jsf?ln=images" width="10px"/></td>
+<td><input id="optionsForm:aripochkBox" name="optionsForm:aripochkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:aripochkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:aripochkBox">ARIPO</label></td>
+<td><input id="optionsForm:kechkBox" name="optionsForm:kechkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:kechkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:kechkBox">Kenya</label></td>
+<td><input id="optionsForm:machkBox" name="optionsForm:machkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:machkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:machkBox">Morocco</label></td>
+<td><input id="optionsForm:zachkBox" name="optionsForm:zachkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:zachkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:zachkBox">South Africa</label></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class="columnAlign"><input id="optionsForm:americachkBox" name="optionsForm:americachkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:americachkBox"} ,"sourceId":this} )' type="checkbox"/>
+<b><label for="optionsForm:americachkBox">Americas</label></b></td>
+</tr>
+<tr>
+<td class="columnAlign"><img height="0px" src="/search/javax.faces.resource/spacer.gif.jsf?ln=images" width="10px"/><input id="optionsForm:uschkBox" name="optionsForm:uschkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:uschkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:uschkBox">United States of America</label></td>
+</tr>
+<tr>
+<td class="columnAlign"><img height="0px" src="/search/javax.faces.resource/spacer.gif.jsf?ln=images" width="10px"/><input id="optionsForm:latipatchkBox" name="optionsForm:latipatchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:latipatchkBox"} ,"sourceId":this} )' type="checkbox"/>
+<b><label for="optionsForm:latipatchkBox">LATIPAT</label></b></td>
+</tr>
+<tr>
+<td class="columnAlign"><table class="countryPanel">
+<tbody>
+<tr class="alignTop">
+<td><img height="0px" src="/search/javax.faces.resource/spacer.gif.jsf?ln=images" width="20px"/></td>
+<td><input id="optionsForm:archkBox" name="optionsForm:archkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:archkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:archkBox">Argentina</label></td>
+<td><input id="optionsForm:brchkBox" name="optionsForm:brchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:brchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:brchkBox">Brazil</label></td>
+<td><input id="optionsForm:cichkBox" name="optionsForm:cichkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:cichkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:cichkBox">Chile</label></td>
+<td><input id="optionsForm:cochkBox" name="optionsForm:cochkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:cochkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:cochkBox">Colombia</label></td>
+<td><input id="optionsForm:crchkBox" name="optionsForm:crchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:crchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:crchkBox">Costa Rica</label></td>
+<td><input id="optionsForm:cuchkBox" name="optionsForm:cuchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:cuchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:cuchkBox">Cuba</label></td>
+<td><input id="optionsForm:dochkBox" name="optionsForm:dochkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:dochkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:dochkBox">Dominican Rep.</label></td>
+</tr>
+<tr class="alignTop">
+<td><img height="0px" src="/search/javax.faces.resource/spacer.gif.jsf?ln=images" width="20px"/></td>
+<td><input id="optionsForm:ecchkBox" name="optionsForm:ecchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:ecchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:ecchkBox">Ecuador</label></td>
+<td><input id="optionsForm:svchkBox" name="optionsForm:svchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:svchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:svchkBox">El Salvador</label></td>
+<td><input id="optionsForm:gtchkBox" name="optionsForm:gtchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:gtchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:gtchkBox">Guatemala</label></td>
+<td><input id="optionsForm:hnchkBox" name="optionsForm:hnchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:hnchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:hnchkBox">Honduras</label></td>
+<td><input id="optionsForm:mxchkBox" name="optionsForm:mxchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:mxchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:mxchkBox">Mexico</label></td>
+<td><input id="optionsForm:nichkBox" name="optionsForm:nichkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:nichkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:nichkBox">Nicaragua</label></td>
+<td><input id="optionsForm:pachkBox" name="optionsForm:pachkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:pachkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:pachkBox">Panama</label></td>
+</tr>
+<tr class="alignTop">
+<td><img height="0px" src="/search/javax.faces.resource/spacer.gif.jsf?ln=images" width="20px"/></td>
+<td><input id="optionsForm:pechkBox" name="optionsForm:pechkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:pechkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:pechkBox">Peru</label></td>
+<td><input id="optionsForm:uychkBox" name="optionsForm:uychkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:uychkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:uychkBox">Uruguay</label></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class="columnAlign"><input id="optionsForm:europechkBox" name="optionsForm:europechkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:europechkBox"} ,"sourceId":this} )' type="checkbox"/>
+<b><label for="optionsForm:europechkBox">Asia-Europe</label></b></td>
+</tr>
+<tr>
+<td class="columnAlign"><table class="countryPanel">
+<tbody>
+<tr class="alignTop">
+<td><img height="0px" src="/search/javax.faces.resource/spacer.gif.jsf?ln=images" width="10px"/></td>
+<td><input id="optionsForm:bhchkBox" name="optionsForm:bhchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:bhchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:bhchkBox">Bahrain</label></td>
+<td><input id="optionsForm:cnchkBox" name="optionsForm:cnchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:cnchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:cnchkBox">China</label></td>
+<td><input id="optionsForm:eachkBox" name="optionsForm:eachkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:eachkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:eachkBox">Eurasian Patent Office</label></td>
+<td><input id="optionsForm:epchkBox" name="optionsForm:epchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:epchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:epchkBox">European Patent Office</label></td>
+<td><input id="optionsForm:ilchkBox" name="optionsForm:ilchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:ilchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:ilchkBox">Israel</label></td>
+</tr>
+<tr class="alignTop">
+<td><img height="0px" src="/search/javax.faces.resource/spacer.gif.jsf?ln=images" width="10px"/></td>
+<td><input id="optionsForm:jachkBox" name="optionsForm:jachkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:jachkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:jachkBox">Japan</label></td>
+<td><input id="optionsForm:jochkBox" name="optionsForm:jochkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:jochkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:jochkBox">Jordan</label></td>
+<td><input id="optionsForm:ruchkBox" name="optionsForm:ruchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:ruchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:ruchkBox">Russian Federation</label></td>
+<td><input id="optionsForm:ruschkBox" name="optionsForm:ruschkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:ruschkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:ruschkBox">Russian Federation(USSR data)</label></td>
+<td><input id="optionsForm:sgchkBox" name="optionsForm:sgchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:sgchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:sgchkBox">Singapore</label></td>
+</tr>
+<tr class="alignTop">
+<td><img height="0px" src="/search/javax.faces.resource/spacer.gif.jsf?ln=images" width="10px"/></td>
+<td><input id="optionsForm:eschkBox" name="optionsForm:eschkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:eschkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:eschkBox">Spain</label></td>
+<td><input id="optionsForm:kochkBox" name="optionsForm:kochkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:kochkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:kochkBox">Republic of Korea</label></td>
+<td><input id="optionsForm:vnchkBox" name="optionsForm:vnchkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:vnchkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:vnchkBox">Viet Nam</label></td>
+<td><input id="optionsForm:aechkBox" name="optionsForm:aechkBox" onchange='RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"change","org.richfaces.ajax.component":"optionsForm:aechkBox"} ,"sourceId":this} )' type="checkbox"/><label for="optionsForm:aechkBox">United Arab Emirates</label></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div></div></span></div></div><div class="rf-tab" id="optionsForm:j_idt297" style="display: none"><div class="rf-tab-cnt" id="optionsForm:j_idt297:content"><table class="formGrid">
+<tbody>
+<tr class="alignTop">
+<td><label class="formLabel" for="optionsForm:taptaChoice">WIPO translate (Wipo internal translation tool)</label></td>
+<td><input checked="checked" id="optionsForm:taptaChoice" name="optionsForm:taptaChoice" type="checkbox"/></td>
+</tr>
+</tbody>
+</table>
+</div></div></div>
+<br/>
+<div style="text-align: center;"><input class="rich-button" name="optionsForm:j_idt306" type="submit" value="Save"/><input class="rich-button" name="optionsForm:j_idt307" type="reset" value="Reset"/>
+</div><input autocomplete="off" id="j_id1:javax.faces.ViewState:1" name="javax.faces.ViewState" type="hidden" value="-950562687374763460:-5059884832805734722"/>
+</form></div></div></div><script type="text/javascript">new RichFaces.ui.PopupPanel("optionsPane",{"height":540,"width":820} );</script></div>
+<form action="/search/en/detail.jsf" enctype="application/x-www-form-urlencoded" id="formMenu" method="post" name="formMenu" style="display:inline">
+<input name="formMenu" type="hidden" value="formMenu"/>
+<table class="rf-tb " id="formMenu:j_idt309" style="width : 100%; height: ; position: relative; z-index: 10;"><col style="width : 1px"></col><col style="width : 1px"></col><col style="width : 1px"></col><col style="width : 1px"></col><col style="width : 1px"></col><col style="width : 1px"></col><col style="width : 1px"></col><col style="width : 1px"></col><col style="width : 1px"></col><col style="width : 1px"></col><col style="width : 1px"></col><col style="width : 1px"></col><col style="width : 1px"></col><col style="width : 100%"></col><tr class="rf-tb-cntr"><td class="rf-tb-itm" id="formMenu:j_idt310_itm"><div class="rf-ddm-lbl rf-ddm-unsel " id="formMenu:j_idt310" style="position:relative;"><div class="rf-ddm-lbl-dec" id="formMenu:j_idt310_label">Search</div><div class="rf-ddm-pos"><div class="rf-ddm-lst" id="formMenu:j_idt310_list" style="display:none;min-width:250px;"><div class="rf-ddm-lst-bg"><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:simpleSearch"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Simple</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:simpleSearch",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/search.jsf';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:advancedSearch"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Advanced Search</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:advancedSearch",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/advancedSearch.jsf';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:structuredSearch"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Field Combination</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:structuredSearch",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/structuredSearch.jsf';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:clir"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Cross Lingual Expansion</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:clir",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/clir/clir.jsf?new=true';return false;}} );</script></div></div></div></div><script type="text/javascript">new
+                    RichFaces.ui.Menu("formMenu:j_idt310",{"direction":"RB"} ).initiateGroups();</script></div></td><td class="rf-tb-sep"><div class="rf-tb-sep-line"> </div></td><td class="rf-tb-itm" id="formMenu:j_idt313_itm"><div class="rf-ddm-lbl rf-ddm-unsel " id="formMenu:j_idt313" style="position:relative;"><div class="rf-ddm-lbl-dec" id="formMenu:j_idt313_label">Browse</div><div class="rf-ddm-pos"><div class="rf-ddm-lst" id="formMenu:j_idt313_list" style="display:none;min-width:250px;"><div class="rf-ddm-lst-bg"><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:browseByWeek"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Browse by Week (PCT)</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:browseByWeek",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/resultWeeklyBrowse.jsf';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:sequenceListing"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Sequence listing</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:sequenceListing",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/sequences.jsf';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:greenInventoryEn"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">IPC Green Inventory</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:greenInventoryEn",{"mode":"client","onClickHandler":function(event){document.location.href='http://www.wipo.int/classifications/ipc/en/est/';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt316"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Portal to patent registers</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt316",{"mode":"client","onClickHandler":function(event){document.location.href='http://www.wipo.int/branddb/portal/portal.jsp';return false;}} );</script></div></div></div></div><script type="text/javascript">new
+                    RichFaces.ui.Menu("formMenu:j_idt313",{"direction":"RB"} ).initiateGroups();</script></div></td><td class="rf-tb-sep"><div class="rf-tb-sep-line"> </div></td><td class="rf-tb-itm" id="formMenu:j_idt317_itm"><div class="rf-ddm-lbl rf-ddm-unsel " id="formMenu:j_idt317" style="position:relative;"><div class="rf-ddm-lbl-dec" id="formMenu:j_idt317_label">Translate</div><div class="rf-ddm-pos"><div class="rf-ddm-lst" id="formMenu:j_idt317_list" style="display:none;min-width:250px;"><div class="rf-ddm-lst-bg"><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt320"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">WIPO Translate</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt320",{"mode":"client","onClickHandler":function(event){document.location.href='https://www3.wipo.int/patentscope/translate/translate.jsf?interfaceLanguage=en';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt321"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">WIPO Pearl</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt321",{"mode":"client","onClickHandler":function(event){document.location.href='http://www.wipo.int/wipopearl/search/linguisticSearch.html';return false;}} );</script></div></div></div></div><script type="text/javascript">new
+                    RichFaces.ui.Menu("formMenu:j_idt317",{"direction":"RB"} ).initiateGroups();</script></div></td><td class="rf-tb-sep"><div class="rf-tb-sep-line"> </div></td><td class="rf-tb-itm" id="formMenu:j_idt322_itm"><div class="rf-ddm-lbl rf-ddm-unsel " id="formMenu:j_idt322" style="position:relative;"><div class="rf-ddm-lbl-dec" id="formMenu:j_idt322_label">Options</div><div class="rf-ddm-pos"><div class="rf-ddm-lst" id="formMenu:j_idt322_list" style="display:none;min-width:250px;"><div class="rf-ddm-lst-bg"><div class="rf-ddm-itm rf-ddm-itm-dis " id="formMenu:sortItem" style="position:relative;"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span>Sort<div class="rf-ddm-nd"></div></div><div class="rf-ddm-itm rf-ddm-itm-dis " id="formMenu:j_idt326" style="position:relative;"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span>Graph<div class="rf-ddm-nd"></div></div><div class="rf-ddm-sep"></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:optionsPaneMenu"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Show Options</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:optionsPaneMenu",{"mode":"client","onClickHandler":function(event){RichFaces.ui.ComponentControl.execute(event,{"selector":null,"target":["optionsPane"] ,"callback":function(event,component){component['show'].apply(component,[] );}} ); return false;;return false;}} );</script></div></div></div></div><script type="text/javascript">new
+                    RichFaces.ui.Menu("formMenu:j_idt322",{"direction":"RB"} ).initiateGroups();</script></div></td><td class="rf-tb-sep"><div class="rf-tb-sep-line"> </div></td><td class="rf-tb-itm" id="formMenu:j_idt330_itm"><div class="rf-ddm-lbl rf-ddm-unsel " id="formMenu:j_idt330" style="position:relative;"><div class="rf-ddm-lbl-dec" id="formMenu:j_idt330_label">News</div><div class="rf-ddm-pos"><div class="rf-ddm-lst" id="formMenu:j_idt330_list" style="display:none;min-width:250px;"><div class="rf-ddm-lst-bg"><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt333"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">PATENTSCOPE News</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt333",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/help/news.jsf';return false;}} );</script></div></div></div></div><script type="text/javascript">new
+                    RichFaces.ui.Menu("formMenu:j_idt330",{"direction":"RB"} ).initiateGroups();</script></div></td><td class="rf-tb-sep"><div class="rf-tb-sep-line"> </div></td><td class="rf-tb-itm" id="formMenu:j_idt334_itm"><div class="rf-ddm-lbl rf-ddm-unsel " id="formMenu:j_idt334" style="position:relative;"><div class="rf-ddm-lbl-dec" id="formMenu:j_idt334_label">Login</div><div class="rf-ddm-pos"><div class="rf-ddm-lst" id="formMenu:j_idt334_list" style="display:none;min-width:250px;"><div class="rf-ddm-lst-bg"><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:loginMenu"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Login</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:loginMenu",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/reg/login.jsf';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:signUpMenu"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Account Sign Up</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:signUpMenu",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/reg/registration.jsf';return false;}} );</script></div></div></div></div><script type="text/javascript">new
+                    RichFaces.ui.Menu("formMenu:j_idt334",{"direction":"RB"} ).initiateGroups();</script></div></td><td class="rf-tb-sep"><div class="rf-tb-sep-line"> </div></td><td class="rf-tb-itm" id="formMenu:j_idt338_itm"><div class="rf-ddm-lbl rf-ddm-unsel " id="formMenu:j_idt338" style="position:relative;"><div class="rf-ddm-lbl-dec" id="formMenu:j_idt338_label">Help</div><div class="rf-ddm-pos"><div class="rf-ddm-lst" id="formMenu:j_idt338_list" style="display:none;min-width:250px;"><div class="rf-ddm-lst-bg"><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt340" style="position:relative;"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">How to Search</span><div class="rf-ddm-nd"><div class="rf-ddm-lst rf-ddm-sublst" id="formMenu:j_idt340_list" style="display:none;min-width:250px;"><div class="rf-ddm-lst-bg"><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt341"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">User Guide PATENTSCOPE</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt341",{"mode":"client","onClickHandler":function(event){document.location.href='http://www.wipo.int/freepublications/en/patents/434/wipo_pub_l434_08.pdf';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt342"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">User Guide: Cross Lingual Expansion</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt342",{"mode":"client","onClickHandler":function(event){document.location.href='/search/help/en/CLIR_DOC.pdf';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:helpSyntax"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Query Syntax</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:helpSyntax",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/help/querySyntaxHelp.jsf';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt344"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Fields Definition</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt344",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/help/fieldsHelp.jsf';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt345"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Country Code</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt345",{"mode":"client","onClickHandler":function(event){document.location.href='http://www.wipo.int/export/sites/www/scit/en/standards/pdf/03-03-01.pdf#codes';return false;}} );</script></div></div></div></div></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt346" style="position:relative;"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Data Coverage</span><div class="rf-ddm-nd"><div class="rf-ddm-lst rf-ddm-sublst" id="formMenu:j_idt346_list" style="display:none;min-width:250px;"><div class="rf-ddm-lst-bg"><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt347"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">PCT applications</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt347",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/content.jsf';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt348"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">PCT national phase entry</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt348",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/nationalphase.jsf';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt349"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">National collections</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt349",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/help/data_coverage.jsf';return false;}} );</script></div></div></div></div></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt350"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">FAQ</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt350",{"mode":"client","onClickHandler":function(event){document.location.href='http://www.wipo.int/patentscope/en/faqs_patentscope.html';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt351"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Feedback&amp;Contact</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt351",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/help/forum.jsf';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt352"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">INID codes</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt352",{"mode":"client","onClickHandler":function(event){document.location.href='http://www.wipo.int/standards/en/pdf/03-09-01.pdf';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt353"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Kind codes</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt353",{"mode":"client","onClickHandler":function(event){document.location.href='http://www.wipo.int/patentscope/en//wo_publication_information/kind_codes.html';return false;}} );</script></div><div class="rf-ddm-sep"></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt357"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Tutorials</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt357",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/tutorial.jsf';return false;}} );</script></div><div class="rf-ddm-sep"></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt359" style="position:relative;"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">About</span><div class="rf-ddm-nd"><div class="rf-ddm-lst rf-ddm-sublst" id="formMenu:j_idt359_list" style="display:none;min-width:250px;"><div class="rf-ddm-lst-bg"><div class="rf-ddm-itm rf-ddm-itm-dis " id="formMenu:j_idt360"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span>Overview</div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt361"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Terms And Conditions</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt361",{"mode":"client","onClickHandler":function(event){document.location.href='http://www.wipo.int/patentscope/en/data/terms.html';return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="formMenu:j_idt362"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Disclaimer</span><script type="text/javascript">new RichFaces.ui.MenuItem("formMenu:j_idt362",{"mode":"client","onClickHandler":function(event){document.location.href='/search/en/help/about.jsf';return false;}} );</script></div></div></div></div></div></div></div></div><script type="text/javascript">new
+                    RichFaces.ui.Menu("formMenu:j_idt338").initiateGroups([{"id":"formMenu:j_idt340"} ,{"id":"formMenu:j_idt346"} ,{"id":"formMenu:j_idt359"} ] );</script></div></td><td class="rf-tb-emp"> </td></tr></table><script type="text/javascript">RichFaces.ui.toolbarHandlers({"id":"formMenu:j_idt309","events":{} ,"groups":[] } );</script><input autocomplete="off" id="j_id1:javax.faces.ViewState:2" name="javax.faces.ViewState" type="hidden" value="-950562687374763460:-5059884832805734722"/>
+</form>
+</span>
+<span class="notranslate">
+<div id="navigation"><div>
+<ul>
+<li class="firstNav"><a href="http://www.wipo.int/portal/index.html.en">Home</a></li>
+<li><a href="http://www.wipo.int/services/en/">IP Services</a></li>
+<li class="lastNav"><a href="http://www.wipo.int/patentscope/en/">PATENTSCOPE</a></li>
+</ul></div>
+</div>
+</span>
+</div></span>
+<div class="center">
+<form action="/search/en/detail.jsf" enctype="application/x-www-form-urlencoded" id="detailDocumentForm" method="post" name="detailDocumentForm" style="display:inline">
+<input name="detailDocumentForm" type="hidden" value="detailDocumentForm"/>
+<div align="center">
+<table>
+<tbody>
+<tr>
+<td>
+<div class="mtMenuContainer">
+<script src="https://www3.wipo.int/patentscope/translate/test/taptawidget/taptawj.js" type="text/javascript"></script>
+<span class="taptaMtNew"></span><div class="rf-ddm-lbl rf-ddm-unsel mtMenu " id="detailDocumentForm:j_idt416"><div class="rf-ddm-lbl-dec" id="detailDocumentForm:j_idt416_label">Machine translation</div><div class="rf-ddm-pos"><div class="rf-ddm-lst" id="detailDocumentForm:j_idt416_list" style="display:none;min-width:250px;"><div class="rf-ddm-lst-bg"><div class="rf-ddm-itm rf-ddm-itm-unsel taptaClick1" id="detailDocumentForm:j_idt419"><span class="rf-ddm-itm-ic "><img alt="" height="16" src="/search/images/WipoIcon.png" width="16"/></span><span class="rf-ddm-itm-lbl ">Wipo Translate</span><div class="rf-ddm-nd"><div class="rf-ddm-lst rf-ddm-sublst" id="detailDocumentForm:j_idt419_list" style="display:none;min-width:250px;"><div class="rf-ddm-lst-bg"><div class="rf-ddm-itm rf-ddm-itm-dis " id="detailDocumentForm:j_idt420"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span>Arabic</div><div class="rf-ddm-itm rf-ddm-itm-unsel taptaClick1 taptaClick-de" id="detailDocumentForm:j_idt421"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">German</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt421",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt421",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-dis " id="detailDocumentForm:j_idt422"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span>English</div><div class="rf-ddm-itm rf-ddm-itm-unsel taptaClick1 taptaClick-es" id="detailDocumentForm:j_idt423"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Spanish</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt423",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt423",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel taptaClick1 taptaClick-fr" id="detailDocumentForm:j_idt424"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">French</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt424",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt424",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel taptaClick1 taptaClick-ja" id="detailDocumentForm:j_idt425"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Japanese</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt425",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt425",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel taptaClick1 taptaClick-ko" id="detailDocumentForm:j_idt426"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Korean</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt426",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt426",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-dis " id="detailDocumentForm:j_idt427"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span>Portuguese</div><div class="rf-ddm-itm rf-ddm-itm-unsel taptaClick1 taptaClick-ru" id="detailDocumentForm:j_idt428"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Russian</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt428",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt428",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel taptaClick1 taptaClick-zh" id="detailDocumentForm:j_idt429"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Chinese</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt429",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt429",event,{"incId":"1"} );return false;}} );</script></div></div></div></div></div><div class="rf-ddm-itm rf-ddm-itm-unsel googleClick" id="detailDocumentForm:j_idt430"><span class="rf-ddm-itm-ic "><img alt="" height="16" src="/search/images/GoogleIcon.png" width="16"/></span><span class="rf-ddm-itm-lbl ">Google Translate</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt430",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt430",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel bingClick" id="detailDocumentForm:j_idt431"><span class="rf-ddm-itm-ic "><img alt="" height="16" src="/search/images/BingIcon.png" width="16"/></span><span class="rf-ddm-itm-lbl ">Bing/Microsoft Translate</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt431",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt431",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel baiduClick" id="detailDocumentForm:j_idt432"><span class="rf-ddm-itm-ic "><img alt="" height="16" src="/search/images/BaiduIcon.png" width="16"/></span><span class="rf-ddm-itm-lbl ">Baidu Translate</span><div class="rf-ddm-nd"><div class="rf-ddm-lst rf-ddm-sublst" id="detailDocumentForm:j_idt432_list" style="display:none;min-width:250px;"><div class="rf-ddm-lst-bg"><div class="rf-ddm-itm rf-ddm-itm-unsel baiduClick baiduClick-ar" id="detailDocumentForm:j_idt433"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Arabic</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt433",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt433",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-dis " id="detailDocumentForm:j_idt434"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span>English</div><div class="rf-ddm-itm rf-ddm-itm-unsel baiduClick baiduClick-fr" id="detailDocumentForm:j_idt435"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">French</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt435",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt435",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel baiduClick baiduClick-de" id="detailDocumentForm:j_idt436"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">German</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt436",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt436",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel baiduClick baiduClick-es" id="detailDocumentForm:j_idt437"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Spanish</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt437",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt437",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel baiduClick baiduClick-pt" id="detailDocumentForm:j_idt438"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Portuguese</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt438",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt438",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel baiduClick baiduClick-ru" id="detailDocumentForm:j_idt439"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Russian</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt439",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt439",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel baiduClick baiduClick-ko" id="detailDocumentForm:j_idt440"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Korean</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt440",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt440",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel baiduClick baiduClick-ja" id="detailDocumentForm:j_idt441"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Japanese</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt441",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt441",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel baiduClick baiduClick-zh" id="detailDocumentForm:j_idt442"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Chinese</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt442",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt442",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel " id="detailDocumentForm:j_idt443"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">...</span><div class="rf-ddm-nd"><div class="rf-ddm-lst rf-ddm-sublst" id="detailDocumentForm:j_idt443_list" style="display:none;min-width:250px;"><div class="rf-ddm-lst-bg"><div class="rf-ddm-itm rf-ddm-itm-unsel baiduClick-it" id="detailDocumentForm:j_idt444"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Italian</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt444",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt444",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel baiduClick-th" id="detailDocumentForm:j_idt445"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Thai</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt445",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt445",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel baiduClick-ye" id="detailDocumentForm:j_idt446"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Cantonese</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt446",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt446",event,{"incId":"1"} );return false;}} );</script></div><div class="rf-ddm-itm rf-ddm-itm-unsel baiduClick-tw" id="detailDocumentForm:j_idt447"><span class="rf-ddm-itm-ic "><span class="rf-ddm-emptyIcon"></span></span><span class="rf-ddm-itm-lbl ">Classical Chinese</span><script type="text/javascript">new RichFaces.ui.MenuItem("detailDocumentForm:j_idt447",{"mode":"ajax","onClickHandler":function(event){RichFaces.ajax("detailDocumentForm:j_idt447",event,{"incId":"1"} );return false;}} );</script></div></div></div></div></div></div></div></div></div></div></div></div><script type="text/javascript">new
+                    RichFaces.ui.Menu("detailDocumentForm:j_idt416",{"direction":"RB","mode":"ajax"} ).initiateGroups([{"id":"detailDocumentForm:j_idt419","direction":"RB"} ,{"id":"detailDocumentForm:j_idt432","direction":"RB"} ,{"id":"detailDocumentForm:j_idt443","direction":"RB"} ] );</script></div>
+<span class="taptaInfo" lg="en" values="    detailDocumentNatPhase.isAbstractOrTitleInLanguage: false    detailDocPatentscope.publicationLanguageCodeForTranslation: en               detailDocPatentscope.ipc: &lt;I&gt;&lt;B&gt;G06Q 10/06&lt;/B&gt;&lt;/I&gt; (2012.01)"></span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div><input autocomplete="off" id="j_id1:javax.faces.ViewState:3" name="javax.faces.ViewState" type="hidden" value="-950562687374763460:-5059884832805734722"/>
+</form><span id="resultPanel1" style="font-weight:bold;">1. (WO2014079586) SMART WASTE COLLECTION SYSTEM AND METHOD</span><span class="taptaHiddenMenu"> </span>
+<br/><div id="mytable">
+<form action="/search/en/detail.jsf" enctype="application/x-www-form-urlencoded" id="detailMainForm" method="post" name="detailMainForm">
+<input name="detailMainForm" type="hidden" value="detailMainForm"/>
+<div class="rf-tbp" id="detailMainForm:detailTabPanel"><input id="detailMainForm:detailTabPanel-value" name="detailMainForm:detailTabPanel-value" type="hidden" value="detailMainForm:PCTBiblio"/><div class="rf-tab-hdr-tabline-vis rf-tab-hdr-tabline-top" id="detailMainForm:detailTabPanelheader"><table cellspacing="0" class="rf-tab-hdr-tabs"><tbody><tr><td class="rf-tab-hdr-spcr" style="padding-left: 5px;"><br/></td><td class="rf-tab-hdr rf-tab-hdr-act rf-tab-hdr-top" data-tabname="detailMainForm:PCTBiblio" id="detailMainForm:PCTBiblio:header" style=""><span class="rf-tab-lbl"><a href="detail.jsf?docId=WO2014079586&amp;recNum=1&amp;maxRec=&amp;office=&amp;prevFilter=&amp;sortOption=&amp;queryString=&amp;tab=PCT+Biblio" style="align: left">PCT Biblio. Data</a></span></td><td class="rf-tab-hdr-spcr rf-tab-hortab-tabspcr-wdh" style=""><br/></td><td class="rf-tab-hdr rf-tab-hdr-inact rf-tab-hdr-top" data-tabname="detailMainForm:PCTDescription" id="detailMainForm:PCTDescription:header" style=""><span class="rf-tab-lbl"><a href="detail.jsf?docId=WO2014079586&amp;recNum=1&amp;maxRec=&amp;office=&amp;prevFilter=&amp;sortOption=&amp;queryString=&amp;tab=PCTDescription" style="align: left">Description</a></span></td><td class="rf-tab-hdr-spcr rf-tab-hortab-tabspcr-wdh" style=""><br/></td><td class="rf-tab-hdr rf-tab-hdr-inact rf-tab-hdr-top" data-tabname="detailMainForm:PCTClaims" id="detailMainForm:PCTClaims:header" style=""><span class="rf-tab-lbl"><a href="detail.jsf?docId=WO2014079586&amp;recNum=1&amp;tab=PCTClaims&amp;maxRec=&amp;office=&amp;prevFilter=&amp;sortOption=&amp;queryString=">Claims</a></span></td><td class="rf-tab-hdr-spcr rf-tab-hortab-tabspcr-wdh" style=""><br/></td><td class="rf-tab-hdr rf-tab-hdr-inact rf-tab-hdr-top" data-tabname="detailMainForm:NationalPhase" id="detailMainForm:NationalPhase:header" style=""><span class="rf-tab-lbl"><a href="detail.jsf?docId=WO2014079586&amp;recNum=1&amp;tab=NationalPhase&amp;maxRec=&amp;office=&amp;prevFilter=&amp;sortOption=&amp;queryString=">National Phase</a></span></td><td class="rf-tab-hdr-spcr rf-tab-hortab-tabspcr-wdh" style=""><br/></td><td class="rf-tab-hdr rf-tab-hdr-inact rf-tab-hdr-top" data-tabname="detailMainForm:Notices" id="detailMainForm:Notices:header" style=""><span class="rf-tab-lbl"><a href="detail.jsf?docId=WO2014079586&amp;recNum=1&amp;tab=Notices&amp;maxRec=&amp;office=&amp;prevFilter=&amp;sortOption=&amp;queryString=">Notices</a></span></td><td class="rf-tab-hdr-spcr rf-tab-hortab-tabspcr-wdh" style=""><br/></td><td class="rf-tab-hdr rf-tab-hdr-inact rf-tab-hdr-top" data-tabname="detailMainForm:Drawings" id="detailMainForm:Drawings:header" style=""><span class="rf-tab-lbl"><a href="detail.jsf?docId=WO2014079586&amp;recNum=1&amp;tab=Drawings&amp;maxRec=&amp;office=&amp;prevFilter=&amp;sortOption=&amp;queryString=">Drawings</a></span></td><td class="rf-tab-hdr-spcr rf-tab-hortab-tabspcr-wdh" style=""><br/></td><td class="rf-tab-hdr rf-tab-hdr-inact rf-tab-hdr-top" data-tabname="detailMainForm:PCTDocuments" id="detailMainForm:PCTDocuments:header" style=""><span class="rf-tab-lbl"><a href="detail.jsf?docId=WO2014079586&amp;recNum=1&amp;tab=PCTDocuments&amp;maxRec=&amp;office=&amp;prevFilter=&amp;sortOption=&amp;queryString=">Documents</a></span></td><td class="rf-tab-hdr-spcr rf-tab-hortab-tabspcr-wdh" style=""><br/></td><td class="rf-tab-hdr-spcr" style="padding-right: 5px; width: 100%;"><br/></td></tr></tbody></table><div class="rf-tab-hdr-scrl-lft rf-tab-hdn">«</div><div class="rf-tab-hdr-tablst rf-tab-hdn">↓</div><div class="rf-tab-hdr-scrl-rgh rf-tab-hdn">»</div></div><div class="rf-tab-hdr-brd"></div><div class="rf-tab" id="detailMainForm:PCTBiblio"><div class="rf-tab-cnt" id="detailMainForm:PCTBiblio:content">
+<span class="taptaHiddenMenu" taptatype="biblio"> </span>
+<div>
+<table cellpadding="2" cellspacing="3" id="detailPCTtableHeader" style="width: 850px;" width="850">
+<tr>
+<td align="LEFT" colspan="2" valign="TOP">Latest bibliographic data on file with the International Bureau
+			  
+			
+
+			<div class="permaLink">
+<ul class="dropDown medium noArrow">
+<li><a href="https://patentscope.wipo.int/search/en/WO2014079586" title="PermaLink">
+						 PermaLink
+					
+					 <img src="/search/images/link.gif" style="border-style: none"/>
+</a>
+<ul>
+<li><a href="https://patentscope.wipo.int/search/en/WO2014079586" title="PermaLink"> PermaLink</a></li>
+<li><a href="javascript:bookmark('http://patentscope.wipo.int/search/en/WO2014079586','SMART WASTE COLLECTION SYSTEM AND METHOD');" title="Bookmark">Bookmark</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td align="LEFT" colspan="2" valign="TOP"><hr/></td></tr>
+<tr><td></td><td class="alignRight" colspan="2">
+</td></tr>
+<tr>
+<td align="LEFT" colspan="2">
+<table border="0" cellpadding="0" cellspacing="0" id="detailPCTtableDetail">
+<tr>
+<td valign="TOP"><b>Pub. No.:</b></td>
+<td rowspan="2">  </td>
+<td id="detailPCTtableWO" valign="TOP">WO/2014/079586</td>
+<td rowspan="2" width="25">  </td>
+<td valign="TOP"><b>International Application No.:</b></td>
+<td rowspan="2">  </td>
+<td id="detailPCTtableAN" valign="TOP">PCT/EP2013/003547</td>
+</tr>
+<tr>
+<td valign="TOP"><b>Publication Date:
+					</b></td>
+<td id="detailPCTtablePubDate" valign="BOTTOM">30.05.2014</td>
+<td valign="TOP"><b>International Filing Date:
+					</b></td>
+<td id="detailPCTtableFilingDate" valign="TOP">25.11.2013</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="TOP" width="100"><b>IPC:
+			</b></td>
+<td id="detailPCTtableIPC" valign="TOP" width="550">
+<table><tr><td><span class="notranslate" id="PCTipc"><i><b>G06Q 10/06</b></i> (2012.01)</span>
+</td>
+<td>
+<form action="/search/en/detail.jsf" enctype="application/x-www-form-urlencoded" id="detailMainForm:j_idt545" method="post" name="detailMainForm:j_idt545">
+<input name="detailMainForm:j_idt545" type="hidden" value="detailMainForm:j_idt545"/>
+<div class="rf-p " id="detailMainForm:j_idt545:j_idt546" style="border:none; border:0px; padding:0px; padding-top:0px; padding-right:0px; padding-left:0px"><div class="rf-p-b nopaddingpanel" id="detailMainForm:j_idt545:j_idt546_body">
+<img src="/search/images/icons/icon_info.gif"/><span id="detailMainForm:j_idt545:j_idt548" style="display: none;"><span class="rf-tt tooltip" id="detailMainForm:j_idt545:j_idt548:wrp" style="z-index:1000"><span class="rf-tt-cntr" id="detailMainForm:j_idt545:j_idt548:cntr"><span class="rf-tt-cnt" id="detailMainForm:j_idt545:j_idt548:content">
+<div style="background-color:white; padding: 1px; border:1px; line-height:12.5px; border-color:#E5973E; font-size:11px;"><!--<I><B>G06Q 10/06</B></I> (2012.01)(en) --><table class="ipc"><tr class="ipc_MAINCLASS"><td class="ipccod">G </td><td class="ipctxt"> PHYSICS</td></tr>
+<tr class="ipc_CLASS"><td class="ipccod">06</td><td class="ipctxt"><div class="decal">COMPUTING; CALCULATING; COUNTING</div></td></tr><tr class="ipc_SUBCLASS"><td class="ipccod">Q</td><td class="ipctxt"><div class="decal"><div class="decal">DATA PROCESSING SYSTEMS OR METHODS, SPECIALLY ADAPTED FOR ADMINISTRATIVE, COMMERCIAL, FINANCIAL, MANAGERIAL, SUPERVISORY OR FORECASTING PURPOSES; SYSTEMS OR METHODS SPECIALLY ADAPTED FOR ADMINISTRATIVE, COMMERCIAL, FINANCIAL, MANAGERIAL, SUPERVISORY OR FORECASTING PURPOSES, NOT OTHERWISE PROVIDED FOR</div></div></td></tr><tr class="ipc_GROUP"><td class="ipccod">10</td><td class="ipctxt"><div class="decal"><div class="decal"><div class="decal">Administration; Management</div></div></div></td></tr><tr class="ipc_elt"><td class="ipccod">06</td><td class="ipctxt"><div class="decal"><div class="decal"><div class="decal"><div class="decal">Resources, workflows, human or project management, e.g. organising, planning, scheduling or allocating time, human or machine resources; Enterprise planning; Organisational models</div></div></div></div></td></tr></table>
+</div></span></span></span></span></div></div><input autocomplete="off" id="j_id1:javax.faces.ViewState:4" name="javax.faces.ViewState" type="hidden" value="-950562687374763460:-5059884832805734722"/>
+</form>
+</td></tr></table>
+</td></tr>
+<tr>
+<td width="15%"><b>Applicants:
+			</b></td>
+<td style="width:85%;"><span class="notranslate" id="PCTapplicants"><b>ENEVO OY</b> [FI/FI]; ekniikantei 12
+FI-02150 Espoo (FI)
+			</span>
+</td>
+</tr>
+<tr>
+<td valign="TOP"><b>Inventors:
+			</b></td>
+<td><span class="notranslate" id="PCTinventors"><b>KEKALAINEN, Fredrik</b>;  (FI).<br/><b>ENGSTROM, Johan</b>;  (FI)
+			</span></td>
+</tr>
+<tr>
+<td valign="TOP"><b>Agent:
+			
+			</b></td>
+<td><span class="notranslate" id="PCTagents"><b>NORRIS, Timothy</b>; Basck IPR Ltd.
+9 Meadowford
+Newport
+Saffron Walden
+Essex CB11 3QL (GB)
+			</span></td>
+</tr>
+<tr>
+<td valign="TOP"><b>Priority Data:
+			</b></td>
+<td>
+<table cellpadding="0" cellspacing="0">
+<span class="notranslate"><span class="PCTpriority"><tr><td>1221164.5</td><td width="12"> </td><td>25.11.2012</td><td width="12"> </td><td>GB</td></tr></span>
+</span></table>
+</td>
+</tr>
+<tr>
+<td valign="TOP"><b>Title
+			</b></td>
+<td valign="top"><span class="PCTtitle"><b class="notranslate">(EN)</b> <span class="PCTtitle trans-section" lang="en">SMART WASTE COLLECTION SYSTEM AND METHOD</span><br/><b class="notranslate">(FR)</b> <span class="PCTtitle trans-section" lang="fr">PROCÉDÉ ET SYSTÈME DE COLLECTE DE DÉCHETS INTELLIGENTS</span><br/></span></td>
+</tr>
+<tr>
+<td valign="TOP"><b>Abstract:
+			</b></td>
+<td><a href="/search/docservice_fpimage/WOEP2013003547@@@false@@@en" target="Image">
+<img alt="front page image" src="/search/docservice_fpimage/WOEP2013003547@@@true@@@en" style="margin:15px 15px;float: right;text-decoration: none;border:none;"/></a>
+<div align="LEFT"><span class="PCTabstract"><b class="notranslate">(EN)</b><span class="PCTabstract trans-section" lang="en">A waste collection system (10) includes one or more waste containers (20) for receiving waste (50), a server system (100) for receiving one or more signals via a wireless communication network (70) from sensor arrangements (30, 40) included on the one or more waste containers (20) for sensing a waste status of the one or more containers (20). Beneficially, the server system (100) is operable from receiving the one or more signals to compute an optimal strategy for one or more waste collection vehicles (150) to collect waste from the one or more waste containers (20). The waste collection system (10) is capable of supporting a competitive bidding arrangement for implementing collection of waste (50) for the one or more waste containers (20).</span><br/><b class="notranslate">(FR)</b><span class="PCTabstract trans-section" lang="fr">L'invention concerne un système (10) de collecte de déchets qui comprend un ou plusieurs conteneurs (20) à déchets destinés à recevoir les déchets (50), un système serveur (100) afin de recevoir un ou plusieurs signaux par le biais d'un réseau (70) de communication sans fil depuis des agencements de capteur (30, 40) inclus dans le ou les conteneurs (20) pour déchets, afin de détecter l'état des déchets du ou des conteneurs (20). De manière avantageuse, le système serveur (100) peut fonctionner pour recevoir le ou les signaux, afin de calculer une stratégie optimale pour un ou plusieurs véhicules (150) de collecte de déchets, afin de collecter les déchets depuis le ou les conteneurs (20) pour déchets. Le système (10) de collecte de déchets est capable de supporter un agencement d'offres compétitives pour mettre en œuvre la collecte des déchets (50) pour le ou les conteneurs (20) pour déchets.</span><br/></span></div>
+</td>
+</tr>
+<tr>
+<td valign="TOP"><b>Designated States:
+			</b></td>
+<td><span class="notranslate"><span class="PCTds">AE, AG, AL, AM, AO, AT, AU, AZ, BA, BB, BG, BH, BN, BR, BW, BY, BZ, CA, CH, CL, CN, CO, CR, CU, CZ, DE, DK, DM, DO, DZ, EC, EE, EG, ES, FI, GB, GD, GE, GH, GM, GT, HN, HR, HU, ID, IL, IN, IR, IS, JP, KE, KG, KN, KP, KR, KZ, LA, LC, LK, LR, LS, LT, LU, LY, MA, MD, ME, MG, MK, MN, MW, MX, MY, MZ, NA, NG, NI, NO, NZ, OM, PA, PE, PG, PH, PL, PT, QA, RO, RS, RU, RW, SA, SC, SD, SE, SG, SK, SL, SM, ST, SV, SY, TH, TJ, TM, TN, TR, TT, TZ, UA, UG, US, UZ, VC, VN, ZA, ZM, ZW.<br/></span></span>African Regional Intellectual Property Organization (BW, GH, GM, KE, LR, LS, MW, MZ, NA, RW, SD, SL, SZ, TZ, UG, ZM, ZW)<br/>Eurasian Patent Organization (AM, AZ, BY, KG, KZ, RU, TJ, TM)<br/>European Patent Office (AL, AT, BE, BG, CH, CY, CZ, DE, DK, EE, ES, FI, FR, GB, GR, HR, HU, IE, IS, IT, LT, LU, LV, MC, MK, MT, NL, NO, PL, PT, RO, RS, SE, SI, SK, SM, TR)<br/>African Intellectual Property Organization (BF, BJ, CF, CG, CI, CM, GA, GN, GQ, GW, KM, ML, MR, NE, SN, TD, TG).</td>
+</tr>
+</table>
+<table cellpadding="2" cellspacing="3" width="650">
+<tr>
+<td valign="TOP"><b>Publication Language:
+			</b></td>
+<td>English (<span class="PCTpl">EN</span>)</td>
+</tr>
+<tr>
+<td valign="TOP"><b>Filing Language:
+			</b></td>
+<td>English
+			(<span class="PCTfl">EN</span>)</td>
+</tr>
+</table>
+<br/>
+</div></div></div><div id="detailMainForm:PCTDescription" style="display:none;"></div><div id="detailMainForm:PCTClaims" style="display:none;"></div><div id="detailMainForm:NationalPhase" style="display:none;"></div><div id="detailMainForm:Notices" style="display:none;"></div><div id="detailMainForm:Drawings" style="display:none;"></div><div id="detailMainForm:PCTDocuments" style="display:none;"></div></div><input autocomplete="off" id="j_id1:javax.faces.ViewState:5" name="javax.faces.ViewState" type="hidden" value="-950562687374763460:-5059884832805734722"/>
+</form></div>
+<div id="chem-tooltip" style="visibility:hidden;">
+<img src="#"/>
+<p></p>
+</div>
+<script src="/search/scripts/chemc/chemc.js" type="text/javascript"></script>
+<script>
+		$(function() {
+			ChemC.ChemData = ;
+			ChemC.annotate(); 
+		});
+	</script>
+<div id="canvasholder" style="display:none;"></div>
+</div><script type="text/javascript">new RichFaces.ui.TabPanel("optionsForm:j_idt91",{"ajax":{"incId":"1"} ,"activeItem":"optionsForm:j_idt92","isKeepHeight":false,"cycledSwitching":false} )
+new RichFaces.ui.Tab("optionsForm:j_idt92",{"index":0,"leave":null,"togglePanelId":"optionsForm:j_idt91","switchMode":"client","name":"optionsForm:j_idt92","enter":null,"disabled":false} )
+new RichFaces.ui.Tab("optionsForm:j_idt111",{"index":1,"leave":null,"togglePanelId":"optionsForm:j_idt91","switchMode":"client","name":"optionsForm:j_idt111","enter":null,"disabled":false} )
+new RichFaces.ui.Tab("optionsForm:j_idt134",{"index":2,"leave":null,"togglePanelId":"optionsForm:j_idt91","switchMode":"client","name":"optionsForm:j_idt134","enter":null,"disabled":false} )
+new RichFaces.ui.Tab("optionsForm:j_idt154",{"index":3,"leave":null,"togglePanelId":"optionsForm:j_idt91","switchMode":"client","name":"optionsForm:j_idt154","enter":null,"disabled":false} )
+new RichFaces.ui.Tab("optionsForm:j_idt297",{"index":4,"leave":null,"togglePanelId":"optionsForm:j_idt91","switchMode":"client","name":"optionsForm:j_idt297","enter":null,"disabled":false} )
+new RichFaces.ui.TabPanel("detailMainForm:detailTabPanel",{"ajax":{"incId":"1"} ,"activeItem":"detailMainForm:PCTBiblio","isKeepHeight":false,"cycledSwitching":false} )
+new RichFaces.ui.Tooltip("detailMainForm:j_idt545:j_idt548",{"showDelay":500,"ajax":{"incId":"1"} ,"target":"detailMainForm:j_idt545:j_idt546","offset":[10,10] ,"followMouse":false} )
+new RichFaces.ui.Tab("detailMainForm:PCTBiblio",{"index":0,"leave":null,"togglePanelId":"detailMainForm:detailTabPanel","switchMode":"ajax","name":"detailMainForm:PCTBiblio","enter":null,"disabled":false} )
+new RichFaces.ui.Tab("detailMainForm:PCTDescription",{"index":1,"leave":null,"togglePanelId":"detailMainForm:detailTabPanel","switchMode":"ajax","name":"detailMainForm:PCTDescription","enter":null,"disabled":false} )
+new RichFaces.ui.Tab("detailMainForm:PCTClaims",{"index":2,"leave":null,"togglePanelId":"detailMainForm:detailTabPanel","switchMode":"ajax","name":"detailMainForm:PCTClaims","enter":null,"disabled":false} )
+new RichFaces.ui.Tab("detailMainForm:NationalPhase",{"index":3,"leave":null,"togglePanelId":"detailMainForm:detailTabPanel","switchMode":"ajax","name":"detailMainForm:NationalPhase","enter":null,"disabled":false} )
+new RichFaces.ui.Tab("detailMainForm:Notices",{"index":4,"leave":null,"togglePanelId":"detailMainForm:detailTabPanel","switchMode":"ajax","name":"detailMainForm:Notices","enter":null,"disabled":false} )
+new RichFaces.ui.Tab("detailMainForm:Drawings",{"index":5,"leave":null,"togglePanelId":"detailMainForm:detailTabPanel","switchMode":"ajax","name":"detailMainForm:Drawings","enter":null,"disabled":false} )
+new RichFaces.ui.Tab("detailMainForm:PCTDocuments",{"index":6,"leave":null,"togglePanelId":"detailMainForm:detailTabPanel","switchMode":"ajax","name":"detailMainForm:PCTDocuments","enter":null,"disabled":false} )
+</script></body>
+</html>>

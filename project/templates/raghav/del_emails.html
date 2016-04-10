@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+
+    <head>
+        <title>Emails</title>
+        <link rel="stylesheet" href="{% static 'dashboard.css' %}">
+    </head>    <script>
+      {% if status %}
+        alert('{{status}}');
+      {% endif %}
+    </script>
+
+    <body>
+    <div id="container">
+
+
+        <div id="navbar">
+                <ul>
+                        <li>    <a href="/dashboard/"> Home </a>                         </li>
+                        <li>    <a href="/emails/add/"> Add Emails </a>                                 </li>
+                        <li>    <a href="/emails/del/" class="active"> Delete Emails </a>               </li>
+                        {# <li>    <a href="/script/failed_nums.csv"> Download failed number csv file </a> </li> #}
+                        <li>    <a href="/logout/"> Logout </a>                                         </li>
+
+                </ul>
+        </div>
+        <div id="content">
+
+            <h1>Delete Email</h1>
+
+            <form id="email_form" method="post" action="">
+                {% csrf_token %}
+                <h2>Emails registered</h2>
+                {% for em in email %}
+
+                <input type="checkbox" name="email" value="{{em.email}}"  />{{em.email}}<br>
+                {% endfor %}
+                <br /><br />
+
+                <center><input type="submit" value="Delete" /></center>
+            </form><br><br>
+
+        </div>
+
+    </div>
+    </body>
+</html>

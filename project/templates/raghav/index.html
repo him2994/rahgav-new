@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="{% static 'dashboard.css' %}">
+    </head>
+    <script>
+      {% if status %}
+        alert('{{status}}');
+      {% endif %}
+    </script>
+
+    <body>
+        <div id="container">
+            <div id="content">
+                <h1>Login</h1>
+
+                <form id="login_form" method="post" action="">
+                    {% csrf_token %}
+
+                    <span>  Username: </span><input type="text" name="username" value="" size="50" class="intext" />
+                    <br />
+                    <span>  Password: </span><input type="password" name="password" value="" size="50" class="intext" />
+                    <br />
+
+                    <center>    <input type="submit" value="submit" />  </center>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

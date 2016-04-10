@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+
+    <head>
+        <title>Emials</title>
+        <link rel="stylesheet" href="{% static 'dashboard.css' %}">
+    </head>
+    <script>
+      {% if status %}
+        alert('{{status}}');
+      {% endif %}
+    </script>
+
+    <body>
+        <div id="container">
+
+            <div id="navbar">
+                <ul>
+                        <li>    <a href="/dashboard/" > Home </a>                                       </li>
+                        <li>    <a href="/emails/add/" class="active"> Add Emails </a>                  </li>
+                        <li>    <a href="/emails/del/"> Delete Emails </a>                              </li>
+                        {# <li>    <a href="/script/failed_nums.csv"> Download failed number csv file </a> </li> #}
+                        <li>    <a href="/logout/"> Logout </a>                                         </li>
+
+                </ul>
+            </div>
+
+             <div id="content">
+            <h1>Add Email</h1>
+
+            <form id="email_form" method="post" action="">
+                {% csrf_token %}
+                <span>  Email: </span>  <input type="text" name="email" value="" size="50" class="intext"/>
+                <br />
+
+                <span>  Name: </span>   <input type="text" name="name" value="" size="50" class="intext"/>
+                <br /><br />
+
+                <center>    <input type="submit" value="Add" /> </center>
+            </form><br /><br />
+
+            </div>
+        </div>
+
+    </body>
+</html>
